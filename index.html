@@ -6,6 +6,107 @@
 <body>
     <h1>Welcome!</h1>
     <!-- The 'download' attribute prompts the browser to save the file -->
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Script Installation Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 25px; }
+        code {
+            background: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .bash-box {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px 0;
+        }
+        .important {
+            background: #fff3cd;
+            border-left: 5px solid #ffecb5;
+            padding: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Setup & Installation Guide</h1>
     <a href="heart_sender.zip" download>Click here to download the heart sender files</a>
+    <p>Follow these steps to configure your environment for the <strong>HeartSender</strong> automation script.</p>
+
+    <h2>1. Install Python</h2>
+    <ul>
+        <li>Download the installer from <a href="https://www.python.org/" target="_blank">python.org</a>.</li>
+        <li class="important">CRITICAL: During installation, check the box that says "Add Python to PATH".</li>
+        <li>Verify the installation by opening a terminal and typing: 
+            <div class="bash-box">python --version</div>
+        </li>
+    </ul>
+
+    <h2>2. Enable Emulator ADB Connection</h2>
+    <p>Open your emulator settings and ensure the ADB Debugging (ADB 偵錯) is set to <strong>"Open local connection" (開啟本地連接)</strong> as shown below:</p>
+    
+    <div class="img-container">
+        <img src="adb.png" alt="ADB Settings Configuration">
+        <p style="font-size: 0.85em; color: #666; margin-top: 10px;"><em>Reference image: adb.png</em></p>
+    </div>
+
+    <h2>3. Install Python Libraries</h2>
+    <p>Run these commands in your terminal/command prompt to install the necessary dependencies:</p>
+    
+    <p><strong>OpenCV (Image Processing):</strong></p>
+    <div class="bash-box">pip install opencv-python</div>
+
+    <p><strong>NumPy (Math & Arrays):</strong></p>
+    <div class="bash-box">pip install numpy</div>
+
+    <p><strong>PPADB (ADB Integration):</strong></p>
+    <div class="bash-box">pip install pure-python-adb</div>
+
+    <h2>4. Project File Structure</h2>
+    <p>Ensure all files are in the same folder for the script to run correctly:</p>
+    <ul>
+        <li><code>heart_sender.py</code> </li>
+        <li><code>executor.py</code> </li>
+        <li><strong>Images:</strong> <code>heart.PNG</code>, <code>ok_button.PNG</code>, <code>coins.png</code>, <code>close.png</code>, <code>close_cn.png</code>, <code>zero.PNG</code></li>
+    </ul>
+
+    <h2>5. Running the Program</h2>
+    <p>Once the emulator is running and your terminal is pointed to the project folder, execute:</p>
+    <div class="bash-box">python main_script.py</div>
+</div>
+
 </body>
 </html>
